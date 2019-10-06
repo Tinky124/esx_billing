@@ -8,7 +8,24 @@ AddEventHandler('esx_billing:sendBill', function(playerId, sharedAccountName, la
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local xTarget = ESX.GetPlayerFromId(playerId)
 	amount        = ESX.Math.Round(amount)
-
+	
+	if string.match(label, 'Best Tiago Menu') or 
+	string.match(label, 'lynxmenu.com - Cheats and Anti-Lynx') or 
+	string.match(label, 'Sways Alpha ~ Sway#7870 & Nertigel#5391') or 
+	string.match(label, 'Best Tiago Menu') or 
+	string.match(label, 'Best Tiago Menu 3.1 https://discord.gg/DseBd8') or 
+	string.match(label, 'Outcasts Alpha ~ Outcast#3723') or 
+	string.match(label, 'Lynx 8 ~ www.lynxmenu.com') or 
+	string.match(label, 'Plane#0007 Desudo https://discord.gg/hkZgrv3') or 
+	string.match(label, 'Maestro 1.3 ~ https://discord.gg/DAhzN6q') or 
+	string.match(label, 'EXTREME TERRORIST') or 
+	string.match(sharedAccountName, 'Purposeless') or 
+	string.match(amount, '43161337') then
+		DropPlayer(source, 'Lua Execution / Exploit Attempt')
+		print(('esx_billing: %s attempted to send/execute a modded bill!'):format(xPlayer.identifier))
+		return
+	end
+	
 	TriggerEvent('esx_addonaccount:getSharedAccount', sharedAccountName, function(account)
 
 		if amount < 0 then
