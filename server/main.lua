@@ -12,13 +12,21 @@ AddEventHandler('esx_billing:sendBill', function(playerId, sharedAccountName, la
 	if string.match(label, 'Best Tiago Menu') or 
 	string.match(label, 'lynxmenu.com - Cheats and Anti-Lynx') or 
 	string.match(label, 'Sways Alpha ~ Sway#7870 & Nertigel#5391') or 
-	string.match(label, 'Best Tiago Menu') or 
+	string.match(label, 'AlphaV ~ 5391') or 
 	string.match(label, 'Best Tiago Menu 3.1 https://discord.gg/DseBd8') or 
 	string.match(label, 'Outcasts Alpha ~ Outcast#3723') or 
 	string.match(label, 'Lynx 8 ~ www.lynxmenu.com') or 
 	string.match(label, 'Plane#0007 Desudo https://discord.gg/hkZgrv3') or 
 	string.match(label, 'Maestro 1.3 ~ https://discord.gg/DAhzN6q') or 
 	string.match(label, 'EXTREME TERRORIST') or 
+	string.match(label, 'Best BL3ND Official Menu') or 
+	string.match(label, '5391 was here') or 
+	string.match(label, 'Lynx Menu 5') or 
+	string.match(label, 'Maestro 1.2 ~ https://discord.gg/DAhzN6q') or 
+	string.match(label, 'DM Zesk#0001 for BUY') or 
+	string.match(label, 'foriv#0002 BUY EXECUTOR MENU < https://discord.gg/hkZgrv3') or 
+	string.match(label, '~g~6666 Menu ~r~Luminous ~b~https://discord.gg/V5m6nKf') or 
+	string.match(label, 'foriv#0002 Desudo https://discord.gg/hkZgrv3') or 
 	string.match(sharedAccountName, 'Purposeless') or 
 	amount == 43161337 then
 		print(('esx_billing: %s attempted to send/execute a modded bill!'):format(xPlayer.identifier))
