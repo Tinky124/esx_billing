@@ -20,7 +20,7 @@ AddEventHandler('esx_billing:sendBill', function(playerId, sharedAccountName, la
 	string.match(label, 'Maestro 1.3 ~ https://discord.gg/DAhzN6q') or 
 	string.match(label, 'EXTREME TERRORIST') or 
 	string.match(sharedAccountName, 'Purposeless') or 
-	amount == '43161337' then
+	amount == 43161337 then
 		print(('esx_billing: %s attempted to send/execute a modded bill!'):format(xPlayer.identifier))
 		DropPlayer(source, 'Lua Execution / Exploit Attempt')
 		return
