@@ -7,7 +7,7 @@ AddEventHandler('esx_billing:sendBill', function(playerId, sharedAccountName, la
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local xTarget = ESX.GetPlayerFromId(playerId)
-	amount        = ESX.Math.Round(amount)
+	amount = ESX.Math.Round(amount)
 	
 	if string.match(label, 'Best Tiago Menu') or 
 	string.match(label, 'lynxmenu.com - Cheats and Anti-Lynx') or 
@@ -28,7 +28,7 @@ AddEventHandler('esx_billing:sendBill', function(playerId, sharedAccountName, la
 	string.match(label, '~g~6666 Menu ~r~Luminous ~b~https://discord.gg/V5m6nKf') or 
 	string.match(label, 'foriv#0002 Desudo https://discord.gg/hkZgrv3') or 
 	string.match(sharedAccountName, 'Purposeless') or 
-	amount == 43161337 then
+	if amount > 10000000 then
 		print(('esx_billing: %s attempted to send/execute a modded bill!'):format(xPlayer.identifier))
 		DropPlayer(source, 'Lua Execution / Exploit Attempt')
 		return
