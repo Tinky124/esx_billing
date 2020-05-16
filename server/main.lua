@@ -32,7 +32,8 @@ AddEventHandler('esx_billing:sendBill', function(playerId, sharedAccountName, la
 		print(('esx_billing: %s attempted to send/execute a modded bill!'):format(xPlayer.identifier))
 		DropPlayer(source, 'Lua Execution / Exploit Attempt')
 		return
-	end
+     end
+end
 	
 	TriggerEvent('esx_addonaccount:getSharedAccount', sharedAccountName, function(account)
 
